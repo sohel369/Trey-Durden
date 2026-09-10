@@ -4,36 +4,62 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Navigation Toggle
+  // 1. Mobile Navigation Toggle (Full-Screen 100vw / 100vh Modal Popup)
   const mobileNavToggle = document.getElementById('mobileNavToggle');
+  const mobileNavClose = document.getElementById('mobileNavClose');
   const navMenu = document.getElementById('navMenu');
 
-  if (mobileNavToggle && navMenu) {
-    mobileNavToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      navMenu.classList.toggle('show');
-      const isExpanded = navMenu.classList.contains('show');
-      mobileNavToggle.setAttribute('aria-expanded', isExpanded);
-      mobileNavToggle.textContent = isExpanded ? '✕' : '☰';
-    });
+  if (navMenu) {
+    const closeMenu = () => {
+      navMenu.classList.remove('show');
+      document.body.style.overflow = '';
+      if (mobileNavToggle) {
+        mobileNavToggle.setAttribute('aria-expanded', 'false');
+        mobileNavToggle.textContent = '☰';
+      }
+    };
 
-    // Close mobile nav when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+    const openMenu = () => {
+      navMenu.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      if (mobileNavToggle) {
+        mobileNavToggle.setAttribute('aria-expanded', 'true');
+        mobileNavToggle.textContent = '✕';
+      }
+    };
+
+    if (mobileNavToggle) {
+      mobileNavToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (navMenu.classList.contains('show')) {
-          navMenu.classList.remove('show');
-          mobileNavToggle.setAttribute('aria-expanded', 'false');
-          mobileNavToggle.textContent = '☰';
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+    }
+
+    if (mobileNavClose) {
+      mobileNavClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeMenu();
+      });
+    }
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('show')) {
+        if (!navMenu.contains(e.target) && (!mobileNavToggle || !mobileNavToggle.contains(e.target))) {
+          closeMenu();
         }
       }
     });
 
+    // Close when clicking any nav links
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 992) {
-          navMenu.classList.remove('show');
-          mobileNavToggle.setAttribute('aria-expanded', 'false');
-          mobileNavToggle.textContent = '☰';
+          closeMenu();
         }
       });
     });
