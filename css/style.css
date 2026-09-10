@@ -1462,12 +1462,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Home / climate studio */
 .hero-bento-section {
-  background: linear-gradient(120deg, #11110e 0%, #1f1b15 53%, #31271b 100%);
+  background: linear-gradient(120deg, rgba(17, 17, 14, 0.80) 0%, rgba(31, 27, 21, 0.86) 53%, rgba(49, 39, 27, 0.90) 100%), url('../images/hvac-hero.jpg') center center / cover no-repeat;
   padding: 76px 0 94px;
   isolation: isolate;
+  position: relative;
 }
 .hero-bento-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: radial-gradient(circle at 80% 42%, transparent 0 19%, rgba(220,190,129,0.095) 19.2% 19.55%, transparent 19.8% 28%, rgba(220,190,129,0.07) 28.2% 28.5%, transparent 28.8%), linear-gradient(90deg, rgba(8,8,7,0.40), transparent 72%);
+  pointer-events: none;
 }
 .climate-mode-bar { background: rgba(255,253,248,0.055); border-color: rgba(227,199,142,0.25); border-radius: 3px; padding: 10px 13px 10px 18px; margin-bottom: 21px; }
 .mode-toggle-group { padding: 3px; border-radius: 2px; background: rgba(0,0,0,0.27); border-color: rgba(223,195,139,0.15); }
