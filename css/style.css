@@ -529,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
    INNOVATIVE CLIMATE SWITCHER & HERO BENTO STAGE
    ========================================================================== */
 .hero-bento-section {
-  background: var(--bg-darkest);
+  background: linear-gradient(180deg, rgba(4, 13, 26, 0.82) 0%, rgba(4, 13, 26, 0.93) 100%), url('../images/hvac-hero.jpg') center center / cover no-repeat;
   padding: 60px 0 85px;
   position: relative;
   overflow: hidden;
@@ -540,7 +540,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--grad-hero-glow);
+  background: radial-gradient(circle at 75% 20%, rgba(255, 77, 48, 0.22) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0, 229, 255, 0.16) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -1146,7 +1146,7 @@ h1, h2, h3, h4, h5, h6 {
    Subpage Hero Banner
    ========================================================================== */
 .subpage-hero {
-  background: var(--bg-darkest);
+  background: linear-gradient(135deg, rgba(4, 13, 26, 0.85) 0%, rgba(11, 34, 70, 0.90) 100%), url('../images/hvac-install.jpg') center center / cover no-repeat;
   color: #ffffff;
   padding: 65px 0 75px;
   text-align: center;
@@ -1158,7 +1158,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--grad-hero-glow);
+  background: radial-gradient(circle at 75% 20%, rgba(255, 77, 48, 0.2) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0, 229, 255, 0.15) 0%, transparent 50%);
 }
 
 .subpage-hero .container {
@@ -1527,7 +1527,7 @@ h1, h2, h3, h4, h5, h6 {
 .accordion-item.active .accordion-content { border-color: #e4dccf; }
 .accordion-content p { color: #71695e; }
 
-.subpage-hero { min-height: 330px; display: flex; align-items: center; padding: 66px 0; background: linear-gradient(116deg, #15140f, #292219); }
+.subpage-hero { min-height: 330px; display: flex; align-items: center; padding: 66px 0; background: linear-gradient(116deg, rgba(21, 20, 15, 0.86), rgba(41, 34, 25, 0.90)), url('../images/hvac-install.jpg') center center / cover no-repeat; }
 .subpage-hero::before { background: radial-gradient(circle at 80% 50%, rgba(210,177,109,0.20), transparent 20%), radial-gradient(circle at 80% 50%, transparent 0 31%, rgba(209,176,108,0.10) 31.3% 31.7%, transparent 32%); }
 .subpage-hero h1 { font-family: var(--font-display); font-size: clamp(3rem,5vw,4.8rem); font-weight: 500; letter-spacing: -0.05em; margin: 17px 0 14px; }
 .subpage-hero p { color: #c6bdae; font-size: 1rem; line-height: 1.75; }
