@@ -9,16 +9,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('navMenu');
 
   if (mobileNavToggle && navMenu) {
-    mobileNavToggle.addEventListener('click', () => {
+    mobileNavToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle('show');
       const isExpanded = navMenu.classList.contains('show');
       mobileNavToggle.setAttribute('aria-expanded', isExpanded);
       mobileNavToggle.textContent = isExpanded ? '✕' : '☰';
     });
 
+    // Close mobile nav when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+        if (navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+          mobileNavToggle.setAttribute('aria-expanded', 'false');
+          mobileNavToggle.textContent = '☰';
+        }
+      }
+    });
+
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 992) {
           navMenu.classList.remove('show');
           mobileNavToggle.setAttribute('aria-expanded', 'false');
           mobileNavToggle.textContent = '☰';
