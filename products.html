@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HVAC Products & Equipment Studio | BestComfort Chicago</title>
-  <meta name="description" content="Explore Energy Star 20 SEER2 Air Conditioners, 98% AFUE Furnaces, and Cold Climate Inverter Heat Pumps.">
-  <link rel="stylesheet" href="css/style.css?v=2.1">
+  <title>HVAC Products & Equipment | Best Comfort HVAC Joliet Office</title>
+  <meta name="description" content="Top requested heating, cooling, and air quality equipment from Best Comfort HVAC Joliet Office. Hand picked by licensed technicians.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -13,13 +13,13 @@
   <div class="top-announcement">
     <div class="container">
       <div class="top-left-badges">
-        <span class="badge-live"><span class="live-dot"></span> In Stock: 2026 Energy-Star Certified Equipment</span>
-        <span>📍 Serving Greater Chicago</span>
-        <span style="color: var(--color-cyan);">💰 Up to $2,000 Federal 25C Tax Credit</span>
+        <span class="badge-live"><span class="live-dot"></span> 24/7 Emergency Heating &amp; Cooling Service</span>
+        <span>⚡ Same Day Appointments</span>
+        <span style="color: var(--color-cyan);">✉️ ContactUs@bestcomforthvac.com</span>
       </div>
       <div class="top-right-contact">
-        <span>Speak to an Engineer:</span>
-        <a href="tel:3125550199" class="top-phone-link">📞 (312) 555-0199</a>
+        <span>Call Now:</span>
+        <a href="tel:8155560660" class="top-phone-link">📞 815-556-0660</a>
       </div>
     </div>
   </div>
@@ -31,30 +31,30 @@
         <div class="brand-symbol">🔥❄️</div>
         <div class="brand-text">
           <h1>BEST<span>COMFORT</span></h1>
-          <p>Heating & Air Conditioning</p>
+          <p>HVAC Joliet Office</p>
         </div>
       </a>
 
       <nav class="nav-menu" id="navMenu">
         <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About Us</a>
         <div class="nav-item-dropdown">
           <a href="services.html">Services <span class="dropdown-caret">▼</span></a>
           <ul class="dropdown-menu">
-            <li><a href="services.html#heating">🔥 Heating &amp; Furnace Repair</a></li>
-            <li><a href="services.html#cooling">❄️ AC &amp; Cooling Systems</a></li>
-            <li><a href="services.html#heatpumps">⚡ Cold-Climate Heat Pumps</a></li>
-            <li><a href="services.html#commercial">🏢 Commercial HVAC Services</a></li>
-            <li><a href="services.html#airquality">💨 Indoor Air Quality &amp; Ducts</a></li>
+            <li><a href="services.html#residential">🏠 Residential HVAC</a></li>
+            <li><a href="services.html#commercial">🏢 Commercial HVAC</a></li>
+            <li><a href="services.html#airquality">💨 Air Quality &amp; Ducts</a></li>
             <li><a href="services.html#maintenance">🛠️ Maintenance &amp; Tune-Up Plans</a></li>
+            <li><a href="services.html#emergency">🚨 24/7 Emergency Repairs</a></li>
           </ul>
         </div>
-        <a href="products.html" class="active">Products</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact & FAQ</a>
+        <a href="services.html#financing">Financing</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
 
       <div class="header-right">
-        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">Book Install 📅</a>
+        <a href="tel:8155560660" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">📞 Call Now</a>
         <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">☰</button>
       </div>
     </div>
@@ -63,204 +63,111 @@
   <!-- Subpage Hero -->
   <section class="subpage-hero">
     <div class="container">
-      <span class="badge badge-gradient">📦 2026 HVAC Equipment Catalog</span>
-      <h1>Interactive Climate Hardware Studio</h1>
-      <p>Precision-engineered HVAC systems designed for ultra-quiet operation, extreme weather resilience, and maximum ComEd utility rebates.</p>
+      <span class="badge badge-gradient">📦 Certified Hardware Catalog</span>
+      <h1>Top Products &amp; Equipment</h1>
+      <p>Our most requested heating and cooling equipment, hand picked by our licensed NATE-certified technicians.</p>
     </div>
   </section>
 
-  <!-- Main Product Showcase Section (Client Core Requirement) -->
+  <!-- Category Filter Pills -->
   <section class="section">
     <div class="container">
-
       <div class="section-header">
-        <span class="badge badge-salmon">🌟 Flagship Engineering</span>
-        <h2>Interactive <span>HVAC Hardware Visualizer</span></h2>
-        <p class="section-subtitle">Click between the 4 real thumbnail perspective images below to inspect the equipment. All dynamic placeholder fields are ready for database integration.</p>
+        <span class="badge badge-salmon">🛒 Equipment Catalog</span>
+        <h2>Browse By <span>HVAC Category</span></h2>
+        <p class="section-subtitle">Commercial &amp; residential heating, cooling, and replacement parts with upfront pricing.</p>
       </div>
 
-      <!-- Studio Showcase Stage -->
-      <div class="product-studio-stage">
-        <div class="studio-grid">
-          
-          <!-- Column 1: Primary Image Box + 4 Interactive Thumbnails (Client Core Requirement) -->
-          <div>
-            <!-- Primary Image Box Placeholder with Real Image Display -->
-            <div class="primary-studio-box" id="primaryStudioBox" style="padding: 10px;">
-              <img id="primaryProductImg" src="images/product-ac-main.svg" alt="BestComfort Pro-Series 20.5 SEER2 Central AC Unit" style="width: 100%; height: 100%; object-fit: contain; border-radius: 14px;">
-            </div>
+      <div class="service-filter-bar">
+        <button class="service-filter-pill active" data-filter="all">🌟 All Products</button>
+        <button class="service-filter-pill" data-filter="furnace">🔥 Furnace Only</button>
+        <button class="service-filter-pill" data-filter="furnace-coil">⚡ Furnace &amp; Coil</button>
+        <button class="service-filter-pill" data-filter="ac-condenser">❄️ AC Condenser Only</button>
+        <button class="service-filter-pill" data-filter="parts">🛠️ Parts &amp; Purifiers</button>
+      </div>
 
-            <!-- 4 Thumbnail Perspectives to choose to see (Client Core Requirement) -->
-            <div class="thumbnail-bento-row">
-              <div class="thumbnail-bento-item active" data-img="images/product-ac-main.svg" data-title="Front Exterior Profile" data-desc="Weather-shield galvanized steel casing">
-                <img src="images/thumb-1-exterior.svg" alt="Front Profile Thumbnail" style="width: 100%; height: 50px; border-radius: 6px; object-fit: cover;">
-                <div style="font-size: 0.75rem; font-weight: 750; color: var(--color-blue-deep); margin-top: 4px;">1. Profile</div>
-              </div>
-
-              <div class="thumbnail-bento-item" data-img="images/thumb-2-compressor.svg" data-title="Inverter Scroll Compressor" data-desc="Copeland variable-speed scroll core">
-                <img src="images/thumb-2-compressor.svg" alt="Compressor Core Thumbnail" style="width: 100%; height: 50px; border-radius: 6px; object-fit: cover;">
-                <div style="font-size: 0.75rem; font-weight: 750; color: var(--color-blue-deep); margin-top: 4px;">2. Inverter</div>
-              </div>
-
-              <div class="thumbnail-bento-item" data-img="images/thumb-3-thermostat.svg" data-title="Smart Wi-Fi Thermostat" data-desc="Touchscreen LCD with home automation">
-                <img src="images/thumb-3-thermostat.svg" alt="Smart Thermostat Thumbnail" style="width: 100%; height: 50px; border-radius: 6px; object-fit: cover;">
-                <div style="font-size: 0.75rem; font-weight: 750; color: var(--color-blue-deep); margin-top: 4px;">3. Smart UI</div>
-              </div>
-
-              <div class="thumbnail-bento-item" data-img="images/thumb-4-coils.svg" data-title="Micro-Channel Condenser Coils" data-desc="Hydrophilic anti-corrosion matrix">
-                <img src="images/thumb-4-coils.svg" alt="Condenser Coil Thumbnail" style="width: 100%; height: 50px; border-radius: 6px; object-fit: cover;">
-                <div style="font-size: 0.75rem; font-weight: 750; color: var(--color-blue-deep); margin-top: 4px;">4. Coils</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Column 2: Product Details & Dynamic Application Placeholders (Client Core Requirement) -->
-          <div>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
-              <span class="badge badge-salmon">🔥 Energy-Star 2026 Certified</span>
-              <span class="badge badge-pink">💰 $2,000 Federal Tax Credit</span>
-              <span class="badge badge-blue">📍 Chicago In-Stock</span>
-            </div>
-
-            <h2 style="font-size: 2rem; color: var(--color-blue-deep); margin-bottom: 10px;">
-              BestComfort Ultra-Inverter 20.5 SEER2 Smart Climate System
-            </h2>
-
-            <div style="background: #f1f5f9; padding: 12px 18px; border-radius: var(--radius-sm); margin-bottom: 20px;">
-              <span style="font-size: 2rem; font-weight: 900; color: var(--color-salmon);">$3,499</span>
-              <span style="font-size: 0.88rem; color: var(--color-text-muted); margin-left: 10px;">Installed with 10-Yr Labor Warranty (Financing from $59/mo)</span>
-            </div>
-
-            <!-- Client Specified Dynamic Placeholders: TextPlaceHolder1, TextPlaceHolder2, etc. -->
-            <div class="placeholder-bento-field">
-              <span class="placeholder-bento-tag">[TextPlaceHolder1] - Equipment Model & SKU</span>
-              <div style="font-size: 0.92rem; color: var(--color-text-main);">
-                <strong>Model SKU:</strong> <code>BC-HVAC-2026-CHIC-V2</code> (Dynamic Database Bind Point 1)
-              </div>
-            </div>
-
-            <div class="placeholder-bento-field">
-              <span class="placeholder-bento-tag">[TextPlaceHolder2] - System Overview</span>
-              <div style="font-size: 0.92rem; color: var(--color-text-main);">
-                Multi-stage inverter scroll compressor delivering 20.5 SEER2 cooling and 10.0 HSPF2 heating down to -15°F.
-              </div>
-            </div>
-
-            <div class="placeholder-bento-field">
-              <span class="placeholder-bento-tag">[TextPlaceHolder3] - Performance Highlights</span>
-              <ul class="emoji-bullet-list" style="margin: 6px 0 0;">
-                <li><span class="bullet-emoji salmon">⚡</span> <strong>52% Energy Reduction:</strong> Drastically slashes Chicago electric and gas bills.</li>
-                <li><span class="bullet-emoji pink">🛡️</span> <strong>10-Year Unit Replacement:</strong> Full unit swap if compressor fails.</li>
-                <li><span class="bullet-emoji blue">📱</span> <strong>Smart Ecosystem:</strong> Works with Nest, Ecobee, and Apple HomeKit.</li>
-              </ul>
-            </div>
-
-            <div class="placeholder-bento-field">
-              <span class="placeholder-bento-tag">[TextPlaceHolder4] - Rebates & Incentives</span>
-              <div style="font-size: 0.92rem; color: var(--color-text-main);">
-                Instant $1,400 ComEd utility rebate check + up to $2,000 Federal 25C Energy Tax Credit.
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 14px; margin-top: 24px; flex-wrap: wrap;">
-              <a href="contact.html" class="btn btn-primary">Schedule Installation 📅</a>
-              <a href="tel:3125550199" class="btn btn-outline-salmon">📞 Speak With Engineer</a>
-            </div>
-
-          </div>
-
+      <div class="grid-3" style="margin-top: 30px;">
+        <!-- Product 1 -->
+        <div class="feature-bento-card" data-category="parts">
+          <span class="badge badge-salmon" style="margin-bottom: 8px;">AAON</span>
+          <h3>Capacitor 45/5 MFD 440V</h3>
+          <p>Heavy-duty motor run capacitor for smooth and reliable outdoor condenser compressor operation.</p>
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--color-salmon); margin: 15px 0;">$16.99</div>
+          <a href="contact.html" class="btn btn-primary" style="margin-top: auto;">Order / Request Info ➔</a>
         </div>
 
-        <!-- Technical Specs Accordion (Client Core Requirement) -->
-        <div style="margin-top: 40px;">
-          <div class="accordion-wrapper">
-            <div class="accordion-item">
-              <button class="accordion-header" type="button">
-                <div class="accordion-header-left">
-                  <span class="accordion-badge-icon">📊</span>
-                  <span>Click to Expand Full Technical Specifications & Engineering Matrix</span>
-                </div>
-                <span class="accordion-icon-indicator">+</span>
-              </button>
-              <div class="accordion-content">
-                <table style="width: 100%; border-collapse: collapse; margin-top: 14px;">
-                  <tr style="border-bottom: 1px solid var(--color-border);">
-                    <th style="padding: 10px 14px; text-align: left; background: #f1f5f9; width: 35%;">Capacity Range</th>
-                    <td style="padding: 10px 14px;">2.0 Ton to 5.0 Ton (Inverter Multi-Stage)</td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid var(--color-border);">
-                    <th style="padding: 10px 14px; text-align: left; background: #f1f5f9;">Efficiency Metrics</th>
-                    <td style="padding: 10px 14px;">20.5 SEER2 / 13.0 EER2 / 9.8 HSPF2</td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid var(--color-border);">
-                    <th style="padding: 10px 14px; text-align: left; background: #f1f5f9;">Eco Refrigerant</th>
-                    <td style="padding: 10px 14px;">Low-GWP R-454B (Zero Ozone Depletion)</td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid var(--color-border);">
-                    <th style="padding: 10px 14px; text-align: left; background: #f1f5f9;">Noise Rating</th>
-                    <td style="padding: 10px 14px;">Whisper-Quiet 52 dBA at low speed</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Additional Equipment Cards with Real Visuals -->
-      <div class="section-header" style="margin-top: 60px;">
-        <span class="badge badge-pink">🔥 Complete Equipment Lineup</span>
-        <h2>More Top-Rated <span>HVAC Systems</span></h2>
-      </div>
-
-      <div class="grid-3">
         <!-- Product 2 -->
-        <div class="feature-bento-card">
-          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--color-border);">
-            <img src="images/product-furnace.svg" alt="98% AFUE Modulating Gas Furnace" style="width: 100%; height: 180px; object-fit: cover;">
-          </div>
-          <span class="badge badge-salmon" style="margin-bottom: 8px;">Heating</span>
-          <h3>98% AFUE Gas Furnace</h3>
-          <p>Continuous modulating gas burners calibrated for brutal sub-zero Chicago winters.</p>
-          <div class="placeholder-bento-field">
-            <span class="placeholder-bento-tag">[TextPlaceHolder_Furnace_Specs]</span>
-            <div style="font-size: 0.85rem;">Stainless steel heat exchangers + variable-speed ECM blower.</div>
-          </div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: auto;">Get Furnace Quote ➔</a>
+        <div class="feature-bento-card" data-category="ac-condenser">
+          <span class="badge badge-pink" style="margin-bottom: 8px;">Bryant</span>
+          <h3>Bryant High-SEER AC Condenser</h3>
+          <p>High-efficiency residential central air conditioning outdoor condenser for quiet cooling.</p>
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--color-salmon); margin: 15px 0;">$2,499.99</div>
+          <a href="contact.html" class="btn btn-pink" style="margin-top: auto;">Order / Request Info ➔</a>
         </div>
 
         <!-- Product 3 -->
-        <div class="feature-bento-card">
-          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--color-border);">
-            <img src="images/product-heatpump.svg" alt="Inverter Cold-Climate Heat Pump" style="width: 100%; height: 180px; object-fit: cover;">
-          </div>
-          <span class="badge badge-blue" style="margin-bottom: 8px;">Hybrid Electric</span>
-          <h3>Cold-Climate Heat Pump</h3>
-          <p>Operates smoothly down to -15°F with clean dual-fuel utility savings and $2,000 rebates.</p>
-          <div class="placeholder-bento-field">
-            <span class="placeholder-bento-tag">[TextPlaceHolder_HeatPump_Specs]</span>
-            <div style="font-size: 0.85rem;">Instant $1,400 ComEd deduction + Federal Section 25C tax credit.</div>
-          </div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: auto;">Get Heat Pump Quote ➔</a>
+        <div class="feature-bento-card" data-category="parts">
+          <span class="badge badge-blue" style="margin-bottom: 8px;">AAONAIRE</span>
+          <h3>Digital Thermostat WiFi Enabled</h3>
+          <p>Smart 7-day touchscreen thermostat with mobile app integration and energy tracking.</p>
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--color-salmon); margin: 15px 0;">$149.99</div>
+          <a href="contact.html" class="btn btn-primary" style="margin-top: auto;">Order / Request Info ➔</a>
         </div>
 
         <!-- Product 4 -->
-        <div class="feature-bento-card">
-          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--color-border);">
-            <img src="images/product-purifier.svg" alt="Whole-House UV & HEPA Air Purifier" style="width: 100%; height: 180px; object-fit: cover;">
-          </div>
-          <span class="badge badge-pink" style="margin-bottom: 8px;">Air Quality</span>
-          <h3>Whole-House HEPA &amp; UV</h3>
-          <p>Hospital-grade indoor air purification eliminating allergens, smoke, and viruses.</p>
-          <div class="placeholder-bento-field">
-            <span class="placeholder-bento-tag">[TextPlaceHolder_IAQ_Specs]</span>
-            <div style="font-size: 0.85rem;">254nm germicidal UV lamp core + activated carbon matrix.</div>
-          </div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: auto;">Get Purifier Quote ➔</a>
+        <div class="feature-bento-card" data-category="parts">
+          <span class="badge badge-salmon" style="margin-bottom: 8px;">AAF</span>
+          <h3>16x20x1 MERV 8 Basic Filter</h3>
+          <p>Hospital-grade pleated HVAC air filter for whole-home dust and pollen capture.</p>
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--color-salmon); margin: 15px 0;">$79.99</div>
+          <a href="contact.html" class="btn btn-outline-salmon" style="margin-top: auto;">Order / Request Info ➔</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="feature-bento-card" data-category="parts">
+          <span class="badge badge-blue" style="margin-bottom: 8px;">Adirondack-Aire</span>
+          <h3>Condensate Pump Universal</h3>
+          <p>Automatic condensate removal pump for high-efficiency air conditioning and boilers.</p>
+          <div style="font-size: 1.3rem; font-weight: 800; color: var(--color-salmon); margin: 15px 0;">Call for pricing</div>
+          <a href="tel:8155560660" class="btn btn-primary" style="margin-top: auto;">Call 815-556-0660 ➔</a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="feature-bento-card" data-category="parts">
+          <span class="badge badge-salmon" style="margin-bottom: 8px;">AAON</span>
+          <h3>Contactor 2-Pole 30 Amp</h3>
+          <p>Industrial-grade electrical contactor relay for commercial and residential HVAC compressors.</p>
+          <div style="font-size: 1.3rem; font-weight: 800; color: var(--color-salmon); margin: 15px 0;">Call for pricing</div>
+          <a href="tel:8155560660" class="btn btn-outline-salmon" style="margin-top: auto;">Call 815-556-0660 ➔</a>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="feature-bento-card" data-category="furnace">
+          <span class="badge badge-salmon" style="margin-bottom: 8px;">Boilers</span>
+          <h3>Boiler Hot Water System</h3>
+          <p>High-efficiency radiant hot water hydronic boiler system for even winter warmth.</p>
+          <div style="font-size: 1.3rem; font-weight: 800; color: var(--color-salmon); margin: 15px 0;">Call for pricing</div>
+          <a href="tel:8155560660" class="btn btn-primary" style="margin-top: auto;">Call 815-556-0660 ➔</a>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="feature-bento-card" data-category="parts">
+          <span class="badge badge-blue" style="margin-bottom: 8px;">AbsolutAire</span>
+          <h3>UV-C Air Purifier Insert</h3>
+          <p>In-duct ultraviolet germicidal irradiation purifier to destroy airborne viruses and mold.</p>
+          <div style="font-size: 1.3rem; font-weight: 800; color: var(--color-salmon); margin: 15px 0;">Call for pricing</div>
+          <a href="tel:8155560660" class="btn btn-primary" style="margin-top: auto;">Call 815-556-0660 ➔</a>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="feature-bento-card" data-category="furnace-coil">
+          <span class="badge badge-pink" style="margin-bottom: 8px;">Residential</span>
+          <h3>Furnace &amp; Evaporator Coil Match</h3>
+          <p>Matched high-efficiency furnace and cooling coil combination for optimal airflow.</p>
+          <div style="font-size: 1.3rem; font-weight: 800; color: var(--color-salmon); margin: 15px 0;">Free Estimate</div>
+          <a href="contact.html" class="btn btn-pink" style="margin-top: auto;">Request Free Quote ➔</a>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -273,52 +180,67 @@
             <div class="brand-symbol">🔥❄️</div>
             <div class="brand-text">
               <h1 style="color: #fff;">BEST<span>COMFORT</span></h1>
-              <p>Heating & Air Conditioning</p>
+              <p>HVAC Joliet Office</p>
             </div>
           </div>
           <p style="font-size: 0.92rem; margin-bottom: 15px; color: #94a3b8;">
-            Chicago's premier residential & commercial heating, cooling, and heat pump installation specialists.
+            24/7 dispatch &amp; emergency heating &amp; cooling service for residential and commercial customers.
           </p>
-          <p style="color: var(--color-salmon); font-weight: 800;">📞 24/7 Hotline: (312) 555-0199</p>
+          <p style="color: var(--color-salmon); font-weight: 800; font-size: 1.1rem;">📞 815-556-0660</p>
+          <p style="color: #cbd5e1; font-size: 0.88rem; margin-top: 6px;">📍 1504 Essington Rd #3, Joliet, IL, 60435</p>
+          <p style="color: var(--color-cyan); font-size: 0.88rem;">✉️ ContactUs@bestcomforthvac.com</p>
         </div>
 
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="index.html">🏡 Home Overview</a></li>
-            <li><a href="services.html">🛠️ HVAC Services</a></li>
-            <li><a href="products.html">📦 Products & Equipment</a></li>
-            <li><a href="about.html">👥 About Our Team</a></li>
-            <li><a href="contact.html">📅 Schedule Online</a></li>
+            <li><a href="index.html">🏡 Home</a></li>
+            <li><a href="products.html">📦 Products</a></li>
+            <li><a href="about.html">👥 About Us</a></li>
+            <li><a href="services.html#financing">💳 Financing</a></li>
+            <li><a href="services.html">🛠️ Services</a></li>
+            <li><a href="contact.html">📅 Contact Us</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Our Core Services</h4>
+          <h4>Services</h4>
           <ul class="footer-links">
-            <li><a href="services.html">🔥 24/7 Furnace Repair</a></li>
-            <li><a href="services.html">❄️ High-SEER AC Install</a></li>
-            <li><a href="services.html">⚡ Cold-Climate Heat Pumps</a></li>
-            <li><a href="services.html">💨 Air Duct Sanitization</a></li>
-            <li><a href="services.html">🛠️ $89 Safety Tune-Ups</a></li>
+            <li><a href="services.html#residential">🏠 Residential HVAC</a></li>
+            <li><a href="services.html#commercial">🏢 Commercial HVAC</a></li>
+            <li><a href="services.html#airquality">💨 Air Quality</a></li>
+            <li><a href="services.html#maintenance">🛠️ Maintenance Plans</a></li>
+            <li><a href="services.html#emergency">🚨 24/7 Emergency Service</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Chicago Headquarters</h4>
-          <p style="font-size: 0.92rem; margin-bottom: 10px;">📍 450 N Michigan Ave, Chicago, IL 60611</p>
-          <p style="font-size: 0.92rem; margin-bottom: 10px;">✉️ support@bestcomforthvac.com</p>
-          <p style="font-size: 0.92rem; color: var(--color-cyan);">⏰ 24 Hours / 7 Days A Week</p>
+          <h4>Service Area &amp; Hours</h4>
+          <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 8px;">
+            <strong>Hours:</strong> Mon–Fri: 8:00 AM – 6:00 PM<br>
+            Sat: 9:00 AM – 3:00 PM<br>
+            <strong>Emergency:</strong> Available 24/7
+          </p>
+          <div class="service-area-tags">
+            <span class="area-pill">Joliet</span>
+            <span class="area-pill">Addison</span>
+            <span class="area-pill">Alsip</span>
+            <span class="area-pill">Andres</span>
+            <span class="area-pill">Arbury Hills</span>
+            <span class="area-pill">Arlington Heights</span>
+            <span class="area-pill">Plainfield</span>
+            <span class="area-pill">Naperville</span>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 BestComfort HVAC. All Rights Reserved. 100% Pure Handcrafted HTML5/CSS3/Vanilla JS.</p>
-        <p>Electric Salmon • Rich Midnight Blue • Hot Pink • Electric Cyan Theme</p>
+        <p>&copy; 2026 Best Comfort HVAC Joliet Office. All rights reserved. Licensed &amp; Insured · EPA Certified.</p>
+        <p>24/7 Emergency Heating &amp; Cooling Dispatch</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=2.1"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 /**
- * BESTCOMFORT HVAC - 100% Pure Vanilla JS
- * Zero External Libraries, Fully Validated
+ * Best Comfort HVAC Joliet Office - Interactive Vanilla JS
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileNavToggle.textContent = isExpanded ? '✕' : '☰';
     });
 
-    // Auto-close mobile nav when a link is clicked
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroDynamicTitle = document.getElementById('heroDynamicTitle');
   const heroDynamicDesc = document.getElementById('heroDynamicDesc');
   const heroTempGauge = document.getElementById('heroTempGauge');
-  const heroTempLabel = document.getElementById('heroTempLabel');
 
   if (heatModeBtn && coolModeBtn) {
     heatModeBtn.addEventListener('click', () => {
@@ -42,18 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
       coolModeBtn.classList.remove('active', 'cool');
       
       if (heroDynamicTitle) {
-        heroDynamicTitle.innerHTML = 'Polar Vortex <span class="text-gradient">Heating Defense</span>';
+        heroDynamicTitle.innerHTML = 'Best Comfort HVAC <span class="text-gradient">Heating &amp; Cooling Experts</span>';
       }
       if (heroDynamicDesc) {
-        heroDynamicDesc.textContent = 'Keep your home cozy at 72°F during -15°F Chicago winter chills with our 98% AFUE modulating gas furnaces and cold-climate heat pumps.';
+        heroDynamicDesc.textContent = 'Professional HVAC services for residential and commercial customers in the Chicago & Joliet area. 24/7 emergency service available with same-day appointments.';
       }
       if (heroTempGauge) {
-        heroTempGauge.textContent = '72°F';
+        heroTempGauge.textContent = '24/7';
         heroTempGauge.style.borderColor = 'var(--color-salmon)';
         heroTempGauge.style.color = '#ffffff';
-      }
-      if (heroTempLabel) {
-        heroTempLabel.textContent = 'Optimal Heating Mode Active';
       }
     });
 
@@ -62,60 +56,30 @@ document.addEventListener('DOMContentLoaded', () => {
       heatModeBtn.classList.remove('active', 'heat');
 
       if (heroDynamicTitle) {
-        heroDynamicTitle.innerHTML = 'High-SEER2 <span class="text-gradient-cyan">Summer Cool Wave</span>';
+        heroDynamicTitle.innerHTML = 'Summer High-Efficiency <span class="text-gradient-cyan">Cooling &amp; AC Defense</span>';
       }
       if (heroDynamicDesc) {
-        heroDynamicDesc.textContent = 'Rapid dehumidification and whisper-quiet cooling during 95°F Chicago summer heatwaves with 20.5 SEER2 inverter central air systems.';
+        heroDynamicDesc.textContent = 'Keep your home ice-cold during 95°F Midwest heat waves with high-SEER2 central AC and multi-zone ductless systems.';
       }
       if (heroTempGauge) {
         heroTempGauge.textContent = '68°F';
         heroTempGauge.style.borderColor = 'var(--color-cyan)';
         heroTempGauge.style.color = 'var(--color-cyan)';
       }
-      if (heroTempLabel) {
-        heroTempLabel.textContent = 'High-Efficiency Eco Cooling Active';
-      }
     });
   }
 
-  // 3. Product Page: Interactive 4 Thumbnails & Primary Image Switcher (Client Core Requirement)
-  const thumbnailItems = document.querySelectorAll('.thumbnail-bento-item');
-  const primaryStudioBox = document.getElementById('primaryStudioBox');
-  const primaryProductImg = document.getElementById('primaryProductImg');
-
-  if (thumbnailItems.length > 0 && primaryProductImg) {
-    thumbnailItems.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        thumbnailItems.forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-
-        if (primaryStudioBox) {
-          primaryStudioBox.classList.add('active-glow');
-          setTimeout(() => primaryStudioBox.classList.remove('active-glow'), 400);
-        }
-
-        const imgSrc = thumb.getAttribute('data-img');
-        const imgTitle = thumb.getAttribute('data-title') || 'HVAC Equipment View';
-
-        if (imgSrc) {
-          primaryProductImg.src = imgSrc;
-          primaryProductImg.alt = imgTitle;
-        }
-      });
-    });
-  }
-
-  // 4. Accordion Multi-Group Toggle (Client Core Requirement)
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  // 3. Accordion Multi-Group Toggle
+  const accordionHeaders = document.querySelectorAll('.accordion-header, .stat-accordion-header');
 
   accordionHeaders.forEach(header => {
     header.addEventListener('click', () => {
       const parentItem = header.parentElement;
       const isOpen = parentItem.classList.contains('active');
 
-      const parentWrapper = header.closest('.accordion-wrapper');
+      const parentWrapper = header.closest('.accordion-wrapper, .accordion-stats-wrapper');
       if (parentWrapper) {
-        const siblingItems = parentWrapper.querySelectorAll('.accordion-item');
+        const siblingItems = parentWrapper.querySelectorAll('.accordion-item, .stat-accordion-item');
         siblingItems.forEach(item => {
           if (item !== parentItem) {
             item.classList.remove('active');
@@ -131,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Hash Link & Deep-Link Accordion Auto-Open
+  // 4. Hash Link & Deep-Link Accordion Auto-Open
   function handleAccordionHash() {
     const hash = window.location.hash;
     if (hash) {
@@ -152,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
   handleAccordionHash();
   window.addEventListener('hashchange', handleAccordionHash);
 
-  // 6. Service Filter Pills (Services Page)
-  const filterPills = document.querySelectorAll('.service-filter-pill');
+  // 5. Service Filter Pills (Services Page)
+  const filterPills = document.querySelectorAll('.service-filter-pill[data-target]');
   if (filterPills.length > 0) {
     filterPills.forEach(pill => {
       pill.addEventListener('click', () => {
@@ -182,29 +146,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Neighborhood One-Click Auto-Fill (Contact Page)
-  const neighborhoodBtns = document.querySelectorAll('.neighborhood-btn');
-  const bookZipInput = document.getElementById('bookZip');
+  // 6. Product Filter Pills (Products Page)
+  const productFilterPills = document.querySelectorAll('.service-filter-pill[data-filter]');
+  const productCards = document.querySelectorAll('.feature-bento-card[data-category]');
 
-  if (neighborhoodBtns.length > 0 && bookZipInput) {
-    neighborhoodBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        neighborhoodBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const zip = btn.getAttribute('data-zip') || '60611';
-        bookZipInput.value = zip;
+  if (productFilterPills.length > 0 && productCards.length > 0) {
+    productFilterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        productFilterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filterVal = pill.getAttribute('data-filter');
+
+        productCards.forEach(card => {
+          if (filterVal === 'all' || card.getAttribute('data-category') === filterVal) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
   }
 
-  // 8. Form Handlers
+  // 7. Form Handlers
   const heroQuoteForm = document.getElementById('heroQuoteForm');
   if (heroQuoteForm) {
     heroQuoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('quoteName') ? document.getElementById('quoteName').value : 'Valued Customer';
       const service = document.getElementById('quoteService') ? document.getElementById('quoteService').value : 'HVAC Service';
-      alert(`🎉 Thank you, ${name}! Your Chicago estimate request for "${service}" has been dispatched to our nearest field team. We will call you within 15 minutes!`);
+      alert(`🎉 Thank you, ${name}! Your Joliet request for "${service}" has been received. Our dispatch team will call you within 15 minutes at 815-556-0660!`);
       heroQuoteForm.reset();
     });
   }
@@ -213,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('✅ Appointment scheduled successfully! Our Chicago dispatch center has reserved your preferred slot.');
+      alert('✅ Appointment scheduled successfully! Best Comfort HVAC Joliet Office will contact you shortly to confirm your service slot.');
       bookingForm.reset();
     });
   }
