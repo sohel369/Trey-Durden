@@ -3,428 +3,325 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rule 7 Media — Interactive System User Flow & Wireframe Mockups</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glass-card { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
-    .glow-pink { box-shadow: 0 0 30px rgba(225, 29, 72, 0.3); }
-    .glow-cyan { box-shadow: 0 0 30px rgba(6, 182, 212, 0.3); }
-    .glow-green { box-shadow: 0 0 30px rgba(34, 197, 94, 0.3); }
-    .gradient-border { border-image: linear-gradient(to right, #f43f5e, #06b6d4) 1; }
-  </style>
+  <title>BestComfort HVAC | Chicago's Premier Heating, Cooling & Climate Studio</title>
+  <meta name="description" content="Next-generation Chicago HVAC solutions. Modulating gas furnaces, high-SEER2 central cooling, 24/7 polar vortex emergency service.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen p-3 sm:p-6 md:p-8">
+<body>
 
-  <!-- Header Section -->
-  <header class="max-w-7xl mx-auto mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800/80 pb-6">
-    <div class="flex items-center gap-3 text-center sm:text-left">
-      <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-600 to-rose-500 flex items-center justify-center font-black text-white text-2xl shadow-lg glow-pink flex-shrink-0">R</div>
-      <div>
-        <h1 class="text-xl sm:text-2xl font-black tracking-tight text-white">Rule 7 <span class="text-rose-500">Media</span></h1>
-        <p class="text-xs text-slate-400 font-medium">Interactive User Flow & UI Architecture Mockup (Prepared for Kevin)</p>
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container">
+      <div class="top-left-badges">
+        <span class="badge-live"><span class="live-dot"></span> 24/7 Chicago Emergency Dispatch Active</span>
+        <span>📍 Cook, DuPage & Lake County Coverage</span>
+        <span style="color: var(--color-cyan);">⚡ $89 Precision Seasonal Tune-Up Special</span>
+      </div>
+      <div class="top-right-contact">
+        <span>Immediate Dispatch:</span>
+        <a href="tel:3125550199" class="top-phone-link">📞 (312) 555-0199</a>
       </div>
     </div>
-    
-    <!-- Mode Switcher Tabs -->
-    <div class="flex bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800 text-xs font-bold w-full sm:w-auto justify-center">
-      <button id="btn-tab-shop" onclick="switchTab('shop')" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-rose-500 text-white shadow-lg transition-all flex items-center gap-2">
-        <span>🏢 Wrap Shop Flow (B2B)</span>
-      </button>
-      <button id="btn-tab-advertiser" onclick="switchTab('advertiser')" class="px-4 sm:px-5 py-2.5 rounded-xl text-slate-400 hover:text-white transition-all flex items-center gap-2">
-        <span>🚗 Advertiser Flow (Lead Capture)</span>
-      </button>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">🔥❄️</div>
+        <div class="brand-text">
+          <h1>BEST<span>COMFORT</span></h1>
+          <p>Heating & Air Conditioning</p>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html">Services <span class="dropdown-caret">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#heating">🔥 Heating &amp; Furnace Repair</a></li>
+            <li><a href="services.html#cooling">❄️ AC &amp; Cooling Systems</a></li>
+            <li><a href="services.html#heatpumps">⚡ Cold-Climate Heat Pumps</a></li>
+            <li><a href="services.html#commercial">🏢 Commercial HVAC Services</a></li>
+            <li><a href="services.html#airquality">💨 Indoor Air Quality &amp; Ducts</a></li>
+            <li><a href="services.html#maintenance">🛠️ Maintenance &amp; Tune-Up Plans</a></li>
+          </ul>
+        </div>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact & FAQ</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">Book Service 📅</a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">☰</button>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto space-y-6 sm:space-y-8">
-
-    <!-- ========================================================= -->
-    <!-- TAB 1: WRAP SHOP OWNER FLOW (B2B SUBSCRIBER) -->
-    <!-- ========================================================= -->
-    <div id="view-shop" class="space-y-6 sm:space-y-8">
-
-      <!-- Step Cards Navigation -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-        <div class="glass-card p-3.5 sm:p-4 rounded-2xl border-l-4 border-rose-500 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-rose-500/20 text-rose-400 font-extrabold flex items-center justify-center text-xs flex-shrink-0">1</div>
-          <div>
-            <h4 class="text-xs font-extrabold text-white">Pricing Plans</h4>
-            <p class="text-[10px] text-slate-400 font-medium">$299/mo or Discounts</p>
-          </div>
+  <!-- Bento Grid Hero Section with Interactive Climate Switcher -->
+  <section class="hero-bento-section">
+    <div class="container">
+      
+      <!-- Interactive Heat vs Cool Live Switcher Bar -->
+      <div class="climate-mode-bar">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span class="badge badge-gradient">⚡ Interactive Climate Mode</span>
+          <span style="font-size: 0.9rem; color: #cbd5e1;" id="heroTempLabel">Optimal Heating Mode Active</span>
         </div>
-
-        <div class="glass-card p-3.5 sm:p-4 rounded-2xl border-l-4 border-cyan-500 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs flex-shrink-0">2</div>
-          <div>
-            <h4 class="text-xs font-extrabold text-white">Application Form</h4>
-            <p class="text-[10px] text-slate-400 font-medium">Overnight Fitting Question</p>
-          </div>
-        </div>
-
-        <div class="glass-card p-3.5 sm:p-4 rounded-2xl border-l-4 border-amber-500 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 font-extrabold flex items-center justify-center text-xs flex-shrink-0">3</div>
-          <div>
-            <h4 class="text-xs font-extrabold text-white">14-Day Free Trial</h4>
-            <p class="text-[10px] text-slate-400 font-medium">Stripe $0 Upfront</p>
-          </div>
-        </div>
-
-        <div class="glass-card p-3.5 sm:p-4 rounded-2xl border-l-4 border-emerald-500 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 font-extrabold flex items-center justify-center text-xs flex-shrink-0">4</div>
-          <div>
-            <h4 class="text-xs font-extrabold text-white">QuickBooks Profit</h4>
-            <p class="text-[10px] text-slate-400 font-medium">Job Costing & 87% Margin</p>
-          </div>
+        <div class="mode-toggle-group">
+          <button type="button" class="mode-btn active heat" id="heatModeBtn">🔥 Polar Heat (0°F)</button>
+          <button type="button" class="mode-btn" id="coolModeBtn">❄️ Summer Cool (95°F)</button>
         </div>
       </div>
 
-      <!-- Live Mockup 1: B2B Pricing Page & Application Form -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+      <!-- Bento Grid Layout -->
+      <div class="bento-grid">
         
-        <!-- Pricing Cards Wireframe -->
-        <div class="glass-card p-5 sm:p-6 rounded-3xl space-y-6">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-800 pb-4">
-            <div>
-              <span class="text-[10px] font-black text-rose-500 uppercase tracking-widest bg-rose-500/10 px-2.5 py-1 rounded-md border border-rose-500/20">Exclusively for Wrap Shops</span>
-              <h3 class="text-base sm:text-lg font-bold text-white mt-1">Rule 7 Dashboard Subscription</h3>
-            </div>
-            <span class="text-xs bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-3 py-1 rounded-full font-bold">B2B SaaS</span>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
-            <!-- Plan Card 1 -->
-            <div class="bg-slate-900/90 p-5 rounded-2xl border border-slate-800 space-y-3 relative hover:border-cyan-500/50 transition-colors">
-              <span class="text-[9px] font-extrabold text-cyan-400 uppercase tracking-wider">Premier (6-Month Contract)</span>
-              <div class="flex items-baseline gap-1">
-                <span class="text-3xl font-black text-white">$270</span>
-                <span class="text-xs text-slate-400">/month</span>
-              </div>
-              <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2.5 py-0.5 rounded-md font-bold inline-block border border-emerald-500/20">Save 25%</span>
-              <ul class="text-[11px] text-slate-300 space-y-2 pt-2">
-                <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Exclusive 30-Mile Territory</li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Real-time Fleet Lead Router</li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> QuickBooks / Xero Sync</li>
-              </ul>
-            </div>
-
-            <!-- Plan Card 2 -->
-            <div class="bg-slate-900/90 p-5 rounded-2xl border border-rose-500/60 relative shadow-2xl glow-pink space-y-3">
-              <div class="absolute -top-3 right-4 bg-gradient-to-r from-rose-600 to-rose-500 text-white text-[9px] font-black uppercase px-3 py-1 rounded-full shadow-lg">Most Popular</div>
-              <span class="text-[9px] font-extrabold text-rose-400 uppercase tracking-wider">Ultimate (12-Month Contract)</span>
-              <div class="flex items-baseline gap-1">
-                <span class="text-3xl font-black text-white">$190</span>
-                <span class="text-xs text-slate-400">/month</span>
-              </div>
-              <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2.5 py-0.5 rounded-md font-bold inline-block border border-emerald-500/20">Save 50%</span>
-              <ul class="text-[11px] text-slate-300 space-y-2 pt-2">
-                <li class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span> 150-Mile Radius Territory Lock</li>
-                <li class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span> Automated 87% Margin Alerts</li>
-                <li class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span> Subdomain: shop.rule7media.com</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Application Form Wireframe (Overnight Fitting Question) -->
-        <div class="glass-card p-5 sm:p-6 rounded-3xl space-y-4">
-          <div class="border-b border-slate-800 pb-3 flex justify-between items-center">
-            <h3 class="text-sm font-bold text-white">Wrap Shop Registration Form</h3>
-            <span class="text-[10px] text-rose-400 font-bold bg-rose-500/10 px-2.5 py-1 rounded-md border border-rose-500/20">Revised Form Fields</span>
-          </div>
-
-          <form onsubmit="event.preventDefault();" class="space-y-3.5 text-xs">
-            <div>
-              <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1">Wrapping Shop Name *</label>
-              <input type="text" value="Rapid Wrap Sydney" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-white font-medium" />
-            </div>
-
-            <div>
-              <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1">Business Email *</label>
-              <input type="email" value="kevin@rapidwrap.com.au" class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-white font-medium" />
-            </div>
-
-            <div>
-              <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1">Protected Territory / City *</label>
-              <input type="text" value="Sydney, NSW" class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-white font-medium" />
-            </div>
-
-            <!-- REVISED QUESTION: NO FLEET SIZE FOR WRAP SHOPS -->
-            <div class="p-3.5 bg-rose-500/10 border border-rose-500/30 rounded-2xl space-y-2">
-              <label class="block text-[10px] font-black uppercase text-rose-400">Do you offer Overnight or Weekend Fitting? *</label>
-              <select class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white font-bold text-xs">
-                <option value="yes">Yes — Overnight & Weekend Available</option>
-                <option value="no">No — Standard Business Hours Only</option>
-                <option value="request">On Request / Fleet Contracts Only</option>
-              </select>
-              <span class="text-[9px] text-slate-400 block font-medium">*(Replaced Fleet Size question as requested by Kevin)*</span>
-            </div>
-
-            <button class="w-full py-3.5 bg-gradient-to-r from-rose-600 to-cyan-600 text-white font-extrabold rounded-2xl shadow-xl hover:opacity-90 transition-all transform active:scale-95">
-              Start 14-Day Free Trial ($0 Today via Stripe) ➔
-            </button>
-          </form>
-        </div>
-
-      </div>
-
-      <!-- Live Mockup 2: ULTRA-PREMIUM RESPONSIVE WRAP SHOP CRM DASHBOARD -->
-      <div class="glass-card p-5 sm:p-7 rounded-3xl space-y-6 border border-slate-800/80 shadow-2xl relative overflow-hidden">
-        
-        <!-- Header & Sync Badges -->
-        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 border-b border-slate-800/80 pb-5">
-          <div class="space-y-1">
-            <div class="flex items-center gap-2.5">
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-              </span>
-              <h3 class="text-base sm:text-lg font-black tracking-tight text-white">RAPID WRAP SYDNEY — CRM DASHBOARD</h3>
-            </div>
-            <p class="text-xs text-slate-400 font-medium">
-              Territory Lock: <strong class="text-slate-200">Sydney, NSW</strong> | Subdomain: <span class="text-cyan-400 font-mono font-bold bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">rapidwrap.rule7media.com</span>
+        <!-- Bento Main Hero Card (Spans 2 rows) -->
+        <div class="bento-card bento-card-main">
+          <div>
+            <span class="badge badge-salmon">🏆 #1 Rated Chicagoland HVAC Contractor</span>
+            <h1 class="bento-hero-title" id="heroDynamicTitle">
+              Polar Vortex <span class="text-gradient">Heating Defense</span>
+            </h1>
+            <p class="bento-lead" id="heroDynamicDesc">
+              Keep your home cozy at 72°F during -15°F Chicago winter chills with our 98% AFUE modulating gas furnaces and cold-climate heat pumps.
             </p>
-          </div>
 
-          <!-- Status Badges -->
-          <div class="flex flex-wrap items-center gap-2.5">
-            <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1.5 rounded-xl glow-green">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              <span class="text-xs font-extrabold text-emerald-400">QuickBooks Sync: CONNECTED</span>
-            </div>
-            <div class="bg-gradient-to-r from-rose-500 to-rose-600 text-white font-black text-[10px] uppercase px-3 py-1.5 rounded-xl shadow-md">
-              87% Margin Alert ON
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 25px;">
+              <a href="contact.html" class="btn btn-primary">Schedule Free Estimate ⚡</a>
+              <a href="products.html" class="btn btn-outline-white">Explore Equipment 📦</a>
             </div>
           </div>
-        </div>
 
-        <!-- KPI Metrics Summary Bar -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-          <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800">
-            <span class="text-[10px] font-bold uppercase text-slate-500 block mb-1">Active Pipeline Leads</span>
-            <strong class="text-lg font-black text-white">2 Fleet Requests</strong>
-          </div>
-          <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800">
-            <span class="text-[10px] font-bold uppercase text-slate-500 block mb-1">Est. Contract Value</span>
-            <strong class="text-lg font-black text-cyan-400">$99,000.00</strong>
-          </div>
-          <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800">
-            <span class="text-[10px] font-bold uppercase text-slate-500 block mb-1">Est. COGS (Material+Labor)</span>
-            <strong class="text-lg font-black text-slate-300">$14,370.00</strong>
-          </div>
-          <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800">
-            <span class="text-[10px] font-bold uppercase text-slate-500 block mb-1">Avg. Projected Margin</span>
-            <strong class="text-lg font-black text-emerald-400">86.2% (Target Exceeded)</strong>
-          </div>
-        </div>
-
-        <!-- Incoming Fleet Leads Queue -->
-        <div class="space-y-4">
-          <div class="flex justify-between items-center">
-            <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-widest">Live Incoming Local Fleet Leads (Captured from Advertiser Funnel)</h4>
-            <span class="text-[10px] text-slate-500 font-medium">Real-Time WebSocket Sync Active</span>
-          </div>
-
-          <!-- 1. DESKTOP/TABLET TABLE VIEW (Hidden on small screens) -->
-          <div class="hidden md:block overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
-            <table class="w-full text-xs text-left">
-              <thead class="text-[10px] font-black uppercase text-slate-400 bg-slate-900/90 border-b border-slate-800">
-                <tr>
-                  <th class="p-4">Advertiser / Company</th>
-                  <th class="p-4">Fleet Request</th>
-                  <th class="p-4">Est. Contract Value</th>
-                  <th class="p-4">Job COGS (Material + Labor)</th>
-                  <th class="p-4">Projected Gross Margin</th>
-                  <th class="p-4">Lead Intent</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-800/60 font-medium">
-                <tr class="hover:bg-slate-900/80 transition-colors">
-                  <td class="p-4">
-                    <strong class="text-white block font-bold text-sm">Apex Logistics</strong>
-                    <span class="text-[10px] text-slate-400">Sydney CBD | Verified Business</span>
-                  </td>
-                  <td class="p-4 text-slate-300 font-semibold">25 Commercial Vans</td>
-                  <td class="p-4 text-cyan-400 font-extrabold text-sm">$75,000</td>
-                  <td class="p-4 text-slate-400">$11,250 <span class="text-[10px] text-slate-500">(15%)</span></td>
-                  <td class="p-4 text-emerald-400 font-black text-sm">$63,750 <span class="text-[10px] bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 font-bold ml-1">85% Margin</span></td>
-                  <td class="p-4"><span class="bg-rose-500/20 text-rose-400 border border-rose-500/40 px-3 py-1 rounded-xl font-black text-[10px] shadow-sm glow-pink">🔥 HOT LEAD</span></td>
-                </tr>
-                <tr class="hover:bg-slate-900/80 transition-colors">
-                  <td class="p-4">
-                    <strong class="text-white block font-bold text-sm">Metro Plumbing Services</strong>
-                    <span class="text-[10px] text-slate-400">Parramatta | Local Fleet</span>
-                  </td>
-                  <td class="p-4 text-slate-300 font-semibold">8 Service Utes</td>
-                  <td class="p-4 text-cyan-400 font-extrabold text-sm">$24,000</td>
-                  <td class="p-4 text-slate-400">$3,120 <span class="text-[10px] text-slate-500">(13%)</span></td>
-                  <td class="p-4 text-emerald-400 font-black text-sm">$20,880 <span class="text-[10px] bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 font-bold ml-1">87% Target</span></td>
-                  <td class="p-4"><span class="bg-amber-500/20 text-amber-400 border border-amber-500/40 px-3 py-1 rounded-xl font-black text-[10px] shadow-sm">⚡ WARM LEAD</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- 2. MOBILE RESPONSIVE CARDS VIEW (Shown ONLY on mobile screens) -->
-          <div class="block md:hidden space-y-3">
-            
-            <!-- Lead Card 1 -->
-            <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800 space-y-3 shadow-lg">
-              <div class="flex justify-between items-start">
-                <div>
-                  <h4 class="font-extrabold text-white text-sm">Apex Logistics</h4>
-                  <span class="text-[10px] text-slate-400">Sydney CBD | 25 Commercial Vans</span>
-                </div>
-                <span class="bg-rose-500/20 text-rose-400 border border-rose-500/40 px-2.5 py-0.5 rounded-lg font-black text-[9px]">🔥 HOT LEAD</span>
-              </div>
-              <div class="grid grid-cols-2 gap-2 text-xs pt-2 border-t border-slate-800">
-                <div>
-                  <span class="text-[9px] text-slate-500 uppercase block">Contract Value</span>
-                  <strong class="text-cyan-400 font-black text-sm">$75,000</strong>
-                </div>
-                <div>
-                  <span class="text-[9px] text-slate-500 uppercase block">Gross Profit</span>
-                  <strong class="text-emerald-400 font-black text-sm">$63,750 (85%)</strong>
-                </div>
-              </div>
-            </div>
-
-            <!-- Lead Card 2 -->
-            <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800 space-y-3 shadow-lg">
-              <div class="flex justify-between items-start">
-                <div>
-                  <h4 class="font-extrabold text-white text-sm">Metro Plumbing Services</h4>
-                  <span class="text-[10px] text-slate-400">Parramatta | 8 Service Utes</span>
-                </div>
-                <span class="bg-amber-500/20 text-amber-400 border border-amber-500/40 px-2.5 py-0.5 rounded-lg font-black text-[9px]">⚡ WARM LEAD</span>
-              </div>
-              <div class="grid grid-cols-2 gap-2 text-xs pt-2 border-t border-slate-800">
-                <div>
-                  <span class="text-[9px] text-slate-500 uppercase block">Contract Value</span>
-                  <strong class="text-cyan-400 font-black text-sm">$24,000</strong>
-                </div>
-                <div>
-                  <span class="text-[9px] text-slate-500 uppercase block">Gross Profit</span>
-                  <strong class="text-emerald-400 font-black text-sm">$20,880 (87%)</strong>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ========================================================= -->
-    <!-- TAB 2: LOCAL ADVERTISER FLOW (WRAP CLIENT LEAD CAPTURE) -->
-    <!-- ========================================================= -->
-    <div id="view-advertiser" class="hidden space-y-6 sm:space-y-8">
-
-      <!-- Advertiser Flow Banner -->
-      <div class="glass-card p-5 sm:p-6 rounded-3xl border-l-4 border-cyan-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <div>
-          <span class="text-[10px] font-black text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-2.5 py-0.5 rounded-md border border-cyan-500/20">Advertiser Experience</span>
-          <h3 class="text-base sm:text-lg font-bold text-white mt-1">Local Business Owner Scans Wrapped Vehicle QR Code</h3>
-          <p class="text-xs text-slate-400">Advertiser lands on <span class="text-cyan-400 font-mono font-bold">rapidwrap.rule7media.com</span> to watch Cinema 8 Interactive Explainer Video.</p>
-        </div>
-        <button onclick="switchTab('shop')" class="text-xs bg-slate-900 hover:bg-slate-800 text-slate-300 px-4 py-2.5 rounded-xl border border-slate-700 font-bold transition-all flex-shrink-0">
-          ← Back to Shop Flow
-        </button>
-      </div>
-
-      <!-- Advertiser Video & Quiz Mockup -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-        
-        <!-- Cinema 8 Video Player Wireframe (2 Cols) -->
-        <div class="lg:col-span-2 glass-card p-5 sm:p-6 rounded-3xl space-y-4">
-          <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-            <h4 class="text-xs sm:text-sm font-bold text-white">Video 1: Why Digital Ads Burn Budget & Real-World Wrap Exposure</h4>
-            <span class="text-[10px] bg-rose-500/10 text-rose-400 px-2.5 py-0.5 rounded-md font-bold border border-rose-500/20">Cinema 8 Interactive</span>
-          </div>
-
-          <!-- Video Player Box -->
-          <div class="relative aspect-video bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 flex items-center justify-center group shadow-2xl">
-            <iframe src="https://cinema8.com/video/8XrR178X" class="w-full h-full border-0 rounded-2xl" title="Cinema 8 Explainer Video"></iframe>
-          </div>
-
-          <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Gotta Scan Them All™ — My Billboard Game Explainer</span>
-            <span class="text-cyan-400 font-bold">Part 1 Completed ✔</span>
-          </div>
-        </div>
-
-        <!-- Advertiser Quiz & Lead Capture Form (1 Col) -->
-        <div class="glass-card p-5 sm:p-6 rounded-3xl space-y-4">
-          <div class="border-b border-slate-800 pb-3">
-            <h4 class="text-sm font-bold text-white">Advertiser Profile & Quiz</h4>
-            <p class="text-[10px] text-slate-400">Captures advertiser budget & fleet size for Rapid Wrap Sydney.</p>
-          </div>
-
-          <form onsubmit="event.preventDefault();" class="space-y-3.5 text-xs">
+          <!-- Live Weather & Load Widget -->
+          <div class="weather-load-widget">
             <div>
-              <label class="block text-[10px] font-extrabold text-slate-400 uppercase mb-1">Company Name</label>
-              <input type="text" value="Apex Logistics" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-2.5 text-white" />
+              <span style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Live Chicago Climate Target</span>
+              <h4 style="color: #ffffff; font-size: 1.15rem; margin-top: 4px;">Extreme Weather Efficiency</h4>
+              <p style="color: var(--color-cyan); font-size: 0.85rem; margin: 0;">100% Guaranteed Temperature Stability</p>
             </div>
+            <div class="temp-gauge-circle" id="heroTempGauge">72°F</div>
+          </div>
+        </div>
 
-            <div>
-              <label class="block text-[10px] font-extrabold text-slate-400 uppercase mb-1">Business Email</label>
-              <input type="email" value="contact@apexlogistics.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-2.5 text-white" />
+        <!-- Bento Card 2: 24/7 Rapid Dispatch Status -->
+        <div class="bento-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge badge-pink" style="margin-bottom: 12px;">🚨 24/7 Rapid Dispatch</span>
+            <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 8px;">60-Min Chicago Arrival</h3>
+            <p style="color: #94a3b8; font-size: 0.88rem;">Fully stocked emergency vans ready across the Loop, North Shore, and Western Suburbs.</p>
+          </div>
+          <div style="margin-top: 15px; display: flex; align-items: center; justify-content: space-between;">
+            <span style="color: var(--color-salmon); font-weight: 800; font-size: 1.1rem;">📞 (312) 555-0199</span>
+            <a href="contact.html" class="btn btn-outline-salmon" style="padding: 6px 14px; font-size: 0.8rem;">Dispatch ➔</a>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Instant Quick Quote Builder -->
+        <div class="bento-card bento-form-card">
+          <span class="badge badge-gradient">⚡ 15-Min Response</span>
+          <h3>Quick Estimate</h3>
+          <p style="color: #cbd5e1; font-size: 0.85rem; margin-bottom: 15px;">Upfront flat-rate pricing with zero hidden charges.</p>
+          
+          <form id="heroQuoteForm">
+            <div class="form-group">
+              <label class="form-label" for="quoteName">Your Full Name</label>
+              <input type="text" id="quoteName" class="form-control" placeholder="e.g. David Miller" required>
             </div>
-
-            <div>
-              <label class="block text-[10px] font-extrabold text-slate-400 uppercase mb-1">Estimated Fleet Size (For Advertiser)</label>
-              <select class="w-full bg-slate-900 border border-slate-800 rounded-xl p-2.5 text-white font-bold">
-                <option>21+ Vehicles (Commercial Fleet)</option>
-                <option>6 - 20 Vehicles</option>
-                <option>1 - 5 Vehicles</option>
+            <div class="form-group">
+              <label class="form-label" for="quotePhone">Phone Number</label>
+              <input type="tel" id="quotePhone" class="form-control" placeholder="(312) 555-0123" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quoteService">HVAC Service</label>
+              <select id="quoteService" class="form-control">
+                <option value="Furnace Emergency Repair">🔥 Emergency Furnace Repair</option>
+                <option value="AC Installation">❄️ High-SEER2 AC Install</option>
+                <option value="Heat Pump Rebate System">⚡ Cold-Climate Heat Pump ($2,000 Rebate)</option>
+                <option value="$89 Precision Tune-Up">🛠️ $89 Precision Safety Tune-Up</option>
               </select>
             </div>
-
-            <div>
-              <label class="block text-[10px] font-extrabold text-slate-400 uppercase mb-1">Monthly Marketing Budget</label>
-              <select class="w-full bg-slate-900 border border-slate-800 rounded-lg p-2.5 text-white font-bold">
-                <option>$10,000+ / month (Enterprise)</option>
-                <option>$2,500 - $10,000 / month</option>
-              </select>
-            </div>
-
-            <button class="w-full py-3.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold rounded-2xl shadow-xl transition-all">
-              Submit & Unlock Part 2 Video ➔
-            </button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 6px;">Request Free Quote 🚀</button>
           </form>
         </div>
 
       </div>
 
     </div>
+  </section>
 
-  </main>
+  <!-- Featured Climate Suites with Real Images -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-salmon">🛠️ Core Engineering</span>
+        <h2>High-Efficiency Systems For <span>Chicago Weather</span></h2>
+        <p class="section-subtitle">Custom engineered systems that survive Chicago's sub-zero winters and sweltering summer heat waves.</p>
+      </div>
 
-  <!-- Interactive Tab Switcher Script -->
-  <script>
-    function switchTab(tab) {
-      const viewShop = document.getElementById('view-shop');
-      const viewAdvertiser = document.getElementById('view-advertiser');
-      const btnShop = document.getElementById('btn-tab-shop');
-      const btnAdvertiser = document.getElementById('btn-tab-advertiser');
+      <div class="grid-3">
+        <!-- Feature 1 -->
+        <div class="feature-bento-card">
+          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--color-border);">
+            <img src="images/product-furnace.svg" alt="Modulating Gas Furnace" style="width: 100%; height: 160px; object-fit: cover;">
+          </div>
+          <span class="badge badge-salmon" style="margin-bottom: 8px;">Heating</span>
+          <h3>Modulating Gas Furnaces</h3>
+          <p>98% AFUE high-efficiency heating systems with variable speed ECM blowers and stainless steel primary heat exchangers.</p>
+          <ul class="emoji-bullet-list">
+            <li><span class="bullet-emoji salmon">🔥</span> Precision gas valves modulating in 1% steps</li>
+            <li><span class="bullet-emoji salmon">⚡</span> Save up to $750/yr on winter gas heating bills</li>
+            <li><span class="bullet-emoji salmon">🛡️</span> 10-Year Unit Replacement Guarantee</li>
+          </ul>
+          <a href="services.html" class="btn btn-outline-salmon" style="margin-top: auto;">Explore Heating ➔</a>
+        </div>
 
-      if (tab === 'shop') {
-        viewShop.classList.remove('hidden');
-        viewAdvertiser.classList.add('hidden');
-        btnShop.className = 'px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-rose-500 text-white shadow-lg transition-all font-bold flex items-center gap-2';
-        btnAdvertiser.className = 'px-4 sm:px-5 py-2.5 rounded-xl text-slate-400 hover:text-white transition-all font-bold flex items-center gap-2';
-      } else {
-        viewShop.classList.add('hidden');
-        viewAdvertiser.classList.remove('hidden');
-        btnAdvertiser.className = 'px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-600 to-cyan-500 text-white shadow-lg transition-all font-bold flex items-center gap-2';
-        btnShop.className = 'px-4 sm:px-5 py-2.5 rounded-xl text-slate-400 hover:text-white transition-all font-bold flex items-center gap-2';
-      }
-    }
-  </script>
+        <!-- Feature 2 -->
+        <div class="feature-bento-card">
+          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--color-border);">
+            <img src="images/product-ac-main.svg" alt="20.5 SEER2 Inverter AC" style="width: 100%; height: 160px; object-fit: cover;">
+          </div>
+          <span class="badge badge-pink" style="margin-bottom: 8px;">Cooling</span>
+          <h3>20.5 SEER2 Inverter AC</h3>
+          <p>Ultra-quiet central air conditioning providing rapid whole-home dehumidification during humid Midwestern summer days.</p>
+          <ul class="emoji-bullet-list">
+            <li><span class="bullet-emoji pink">❄️</span> Whisper-quiet 52 dBA low-speed sound rating</li>
+            <li><span class="bullet-emoji pink">📱</span> Wi-Fi automation via Apple &amp; Google Home</li>
+            <li><span class="bullet-emoji pink">💰</span> Instant ComEd energy efficiency rebates</li>
+          </ul>
+          <a href="services.html" class="btn btn-pink" style="margin-top: auto;">Explore Cooling ➔</a>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-bento-card">
+          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--color-border);">
+            <img src="images/product-heatpump.svg" alt="Cold Climate Heat Pump" style="width: 100%; height: 160px; object-fit: cover;">
+          </div>
+          <span class="badge badge-blue" style="margin-bottom: 8px;">Hybrid Electric</span>
+          <h3>Cold-Climate Heat Pumps</h3>
+          <p>Next-generation dual-fuel heat pumps operating smoothly down to -15°F ambient outdoor temperature with gas backup.</p>
+          <ul class="emoji-bullet-list">
+            <li><span class="bullet-emoji blue">⚡</span> Dual-fuel hybrid smart auto-switching</li>
+            <li><span class="bullet-emoji blue">🌱</span> Zero carbon emissions in electric mode</li>
+            <li><span class="bullet-emoji blue">💰</span> Up to $2,000 Federal 25C Energy Tax Credit</li>
+          </ul>
+          <a href="products.html" class="btn btn-primary" style="margin-top: auto;">View Heat Pumps ➔</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Accordions (Client Core Requirement) -->
+  <section class="section" style="background: #f1f5f9;">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-pink">📋 Frequently Asked Questions</span>
+        <h2>Everything You Need To Know About <span>Our Service</span></h2>
+      </div>
+
+      <div class="accordion-wrapper" style="max-width: 860px; margin: 0 auto;">
+        
+        <div class="accordion-item active">
+          <button class="accordion-header" type="button">
+            <div class="accordion-header-left">
+              <span class="accordion-badge-icon">🚨</span>
+              <span>How fast is your 24/7 Chicago emergency repair dispatch?</span>
+            </div>
+            <span class="accordion-icon-indicator">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>During active winter freeze warnings and heat advisories, our fully equipped service vans arrive within 60 to 90 minutes anywhere in Cook, DuPage, and Lake Counties to restore safe climate comfort.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
+            <div class="accordion-header-left">
+              <span class="accordion-badge-icon">💰</span>
+              <span>What rebates and tax credits are available for Chicago homeowners?</span>
+            </div>
+            <span class="accordion-icon-indicator">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>As an official ComEd Trade Ally, we instantly apply up to $1,400 in utility rebates right on your invoice, plus guide you through claiming up to $2,000 in Federal Inflation Reduction Act tax credits.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
+            <div class="accordion-header-left">
+              <span class="accordion-badge-icon">🛠️</span>
+              <span>What is checked during the $89 Precision Seasonal Tune-Up?</span>
+            </div>
+            <span class="accordion-icon-indicator">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Our 24-point tune-up includes digital carbon monoxide leak testing, heat exchanger inspection, electrical capacitance checks, refrigerant pressure verification, and smart thermostat calibration.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 18px;">
+            <div class="brand-symbol">🔥❄️</div>
+            <div class="brand-text">
+              <h1 style="color: #fff;">BEST<span>COMFORT</span></h1>
+              <p>Heating & Air Conditioning</p>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; margin-bottom: 15px; color: #94a3b8;">
+            Chicago's premier residential & commercial heating, cooling, and heat pump installation specialists.
+          </p>
+          <p style="color: var(--color-salmon); font-weight: 800;">📞 24/7 Hotline: (312) 555-0199</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">🏡 Home Overview</a></li>
+            <li><a href="services.html">🛠️ HVAC Services</a></li>
+            <li><a href="products.html">📦 Products & Equipment</a></li>
+            <li><a href="about.html">👥 About Our Team</a></li>
+            <li><a href="contact.html">📅 Schedule Online</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">🔥 24/7 Furnace Repair</a></li>
+            <li><a href="services.html">❄️ High-SEER AC Install</a></li>
+            <li><a href="services.html">⚡ Cold-Climate Heat Pumps</a></li>
+            <li><a href="services.html">💨 Air Duct Sanitization</a></li>
+            <li><a href="services.html">🛠️ $89 Safety Tune-Ups</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chicago Headquarters</h4>
+          <p style="font-size: 0.92rem; margin-bottom: 10px;">📍 450 N Michigan Ave, Chicago, IL 60611</p>
+          <p style="font-size: 0.92rem; margin-bottom: 10px;">✉️ support@bestcomforthvac.com</p>
+          <p style="font-size: 0.92rem; color: var(--color-cyan);">⏰ 24 Hours / 7 Days A Week</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 BestComfort HVAC. All Rights Reserved. 100% Pure Handcrafted HTML5/CSS3/Vanilla JS.</p>
+        <p>Electric Salmon • Rich Midnight Blue • Hot Pink • Electric Cyan Theme</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

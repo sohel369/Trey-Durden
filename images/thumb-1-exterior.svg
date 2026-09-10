@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="t1bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071933"/>
+      <stop offset="100%" stop-color="#0e2a54"/>
+    </linearGradient>
+    <linearGradient id="t1sp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d30"/>
+      <stop offset="100%" stop-color="#ff1a75"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="12" fill="url(#t1bg)"/>
+  <!-- Cabinet Front Silhouette -->
+  <rect x="50" y="25" width="100" height="95" rx="8" fill="#1e293b" stroke="url(#t1sp)" stroke-width="2"/>
+  <line x1="60" y1="45" x2="140" y2="45" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="60" y1="60" x2="140" y2="60" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="60" y1="75" x2="140" y2="75" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="60" y1="90" x2="140" y2="90" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="100" cy="68" r="18" fill="#0f172a" stroke="#ff4d30" stroke-width="1.5"/>
+  <text x="100" y="138" fill="#ffffff" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle">1. Front Profile</text>
+</svg>

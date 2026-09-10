@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="t2bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071933"/>
+      <stop offset="100%" stop-color="#0e2a54"/>
+    </linearGradient>
+    <linearGradient id="copGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="12" fill="url(#t2bg)"/>
+  <!-- Inverter Scroll Compressor Core -->
+  <rect x="70" y="30" width="60" height="85" rx="14" fill="#1e293b" stroke="#00e5ff" stroke-width="2"/>
+  <!-- Copper Lines -->
+  <path d="M 60 45 L 70 45" stroke="url(#copGrad)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 130 75 L 145 75" stroke="url(#copGrad)" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="100" cy="65" r="16" fill="#0b2246" stroke="#ff4d30" stroke-width="2"/>
+  <text x="100" y="69" fill="#00e5ff" font-size="12" font-family="sans-serif" font-weight="bold" text-anchor="middle">⚡</text>
+  <text x="100" y="138" fill="#ffffff" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle">2. Inverter Core</text>
+</svg>

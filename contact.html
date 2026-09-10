@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Schedule Service | BestComfort HVAC Chicago</title>
+  <meta name="description" content="Book heating or cooling service with BestComfort HVAC in Chicago, IL. 24/7 Phone Support, Online Booking, and FAQs.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container">
+      <div class="top-left-badges">
+        <span class="badge-live"><span class="live-dot"></span> 24/7 Field Techs Standing By</span>
+        <span>📍 Greater Chicago & Suburbs</span>
+        <span style="color: var(--color-cyan);">⚡ $89 Seasonal Safety Tune-Up</span>
+      </div>
+      <div class="top-right-contact">
+        <span>Immediate Dispatch Hotline:</span>
+        <a href="tel:3125550199" class="top-phone-link">📞 (312) 555-0199</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">🔥❄️</div>
+        <div class="brand-text">
+          <h1>BEST<span>COMFORT</span></h1>
+          <p>Heating & Air Conditioning</p>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html">Home</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html">Services <span class="dropdown-caret">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#heating">🔥 Heating &amp; Furnace Repair</a></li>
+            <li><a href="services.html#cooling">❄️ AC &amp; Cooling Systems</a></li>
+            <li><a href="services.html#heatpumps">⚡ Cold-Climate Heat Pumps</a></li>
+            <li><a href="services.html#commercial">🏢 Commercial HVAC Services</a></li>
+            <li><a href="services.html#airquality">💨 Indoor Air Quality &amp; Ducts</a></li>
+            <li><a href="services.html#maintenance">🛠️ Maintenance &amp; Tune-Up Plans</a></li>
+          </ul>
+        </div>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact & FAQ</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">Book Online 📅</a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Subpage Hero -->
+  <section class="subpage-hero">
+    <div class="container">
+      <span class="badge badge-gradient">📞 24/7 Direct Dispatch</span>
+      <h1>Contact Us & Schedule Service</h1>
+      <p>Need urgent furnace repair or planning a high-efficiency AC installation? Our Chicago technicians are ready 24/7.</p>
+    </div>
+  </section>
+
+  <!-- Contact Grid & Interactive Neighborhood Selector -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        
+        <!-- Booking Form Card -->
+        <div class="feature-bento-card" style="padding: 38px;">
+          <span class="badge badge-pink" style="margin-bottom: 12px;">📅 Guaranteed 15-Minute Callback</span>
+          <h2 style="font-size: 1.9rem; color: var(--color-blue-deep); margin-bottom: 6px;">Schedule Your Visit</h2>
+          <p style="color: var(--color-text-muted); font-size: 0.92rem; margin-bottom: 15px;">Click your Chicago neighborhood below to auto-fill your zip code:</p>
+
+          <!-- Interactive One-Click Neighborhood Zip Selector -->
+          <div class="neighborhood-pills-row">
+            <button type="button" class="neighborhood-btn active" data-zip="60611">Downtown Loop (60611)</button>
+            <button type="button" class="neighborhood-btn" data-zip="60614">Lincoln Park (60614)</button>
+            <button type="button" class="neighborhood-btn" data-zip="60540">Naperville (60540)</button>
+            <button type="button" class="neighborhood-btn" data-zip="60201">Evanston (60201)</button>
+            <button type="button" class="neighborhood-btn" data-zip="60173">Schaumburg (60173)</button>
+          </div>
+
+          <form id="bookingForm">
+            <div class="grid-2" style="gap: 16px; margin-bottom: 16px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="bookName" style="color: var(--color-text-main);">Full Name *</label>
+                <input type="text" id="bookName" class="form-control" style="background: #f8fafc; color: #000; border-color: var(--color-border);" placeholder="Michael Scott" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="bookPhone" style="color: var(--color-text-main);">Phone Number *</label>
+                <input type="tel" id="bookPhone" class="form-control" style="background: #f8fafc; color: #000; border-color: var(--color-border);" placeholder="(312) 555-0199" required>
+              </div>
+            </div>
+
+            <div class="grid-2" style="gap: 16px; margin-bottom: 16px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="bookEmail" style="color: var(--color-text-main);">Email Address</label>
+                <input type="email" id="bookEmail" class="form-control" style="background: #f8fafc; color: #000; border-color: var(--color-border);" placeholder="michael@example.com">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="bookZip" style="color: var(--color-text-main);">Selected Zip Code *</label>
+                <input type="text" id="bookZip" value="60611" class="form-control" style="background: #f8fafc; color: #000; border-color: var(--color-border);" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bookService" style="color: var(--color-text-main);">Required HVAC Service *</label>
+              <select id="bookService" class="form-control" style="background: #f8fafc; color: #000; border-color: var(--color-border);">
+                <option value="Emergency Heating Repair">🚨 24/7 Emergency Heating / Furnace Repair</option>
+                <option value="AC Installation">❄️ High-Efficiency Air Conditioning Install</option>
+                <option value="Heat Pump Upgrade">⚡ Cold-Climate Heat Pump (ComEd Rebates)</option>
+                <option value="$89 Seasonal Tune-Up">🛠️ $89 Comprehensive Safety Tune-Up</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Appointment 🚀</button>
+          </form>
+        </div>
+
+        <!-- Contact Info & Coverage Cards -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          
+          <div style="background: var(--bg-darkest); border-radius: var(--radius-lg); padding: 34px; color: #fff; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border-dark);">
+            <span class="badge badge-live" style="margin-bottom: 14px;"><span class="live-dot"></span> Dispatch Center Open</span>
+            <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 12px;">Chicago Headquarters</h3>
+            <p style="color: #cbd5e1; font-size: 0.92rem; margin-bottom: 20px;">Centrally stationed on Michigan Avenue with service vans deployed across all suburbs.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem;">
+              <div>📍 <strong>Address:</strong> 450 N Michigan Ave, Chicago, IL 60611</div>
+              <div>📞 <strong>Direct Line:</strong> (312) 555-0199</div>
+              <div>✉️ <strong>Support Email:</strong> service@bestcomforthvac.com</div>
+            </div>
+          </div>
+
+          <div class="feature-bento-card" style="padding: 28px;">
+            <span class="badge badge-salmon" style="margin-bottom: 10px;">📍 Fast Chicagoland Response</span>
+            <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Same-Day Service Zones</h3>
+            <ul class="emoji-bullet-list">
+              <li><span class="bullet-emoji salmon">📍</span> <strong>City of Chicago:</strong> Loop, Lincoln Park, Lakeview, Logan Square, Wicker Park</li>
+              <li><span class="bullet-emoji pink">📍</span> <strong>North & West Suburbs:</strong> Evanston, Skokie, Naperville, Schaumburg, Oak Park</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion (Client Core Requirement) -->
+  <section class="section" style="background: #f1f5f9; padding-top: 50px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-salmon">❓ Quick Help</span>
+        <h2>Frequently Asked <span>Questions</span></h2>
+      </div>
+
+      <div class="accordion-wrapper" style="max-width: 860px; margin: 0 auto;">
+        
+        <div class="accordion-item active">
+          <button class="accordion-header" type="button">
+            <div class="accordion-header-left">
+              <span class="accordion-badge-icon">⏱️</span>
+              <span>How quickly can you dispatch a technician to my Chicago home?</span>
+            </div>
+            <span class="accordion-icon-indicator">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>For active heating or cooling emergencies, our average arrival time is under 60 minutes throughout Cook and DuPage counties. For standard tune-ups, we offer scheduled 2-hour arrival windows.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
+            <div class="accordion-header-left">
+              <span class="accordion-badge-icon">💳</span>
+              <span>What financing options are available for new HVAC systems?</span>
+            </div>
+            <span class="accordion-icon-indicator">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>We partner with leading US lenders to offer 0% APR financing for up to 60 months with approved credit, as well as low monthly payment plans starting from $59/month.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 18px;">
+            <div class="brand-symbol">🔥❄️</div>
+            <div class="brand-text">
+              <h1 style="color: #fff;">BEST<span>COMFORT</span></h1>
+              <p>Heating & Air Conditioning</p>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; margin-bottom: 15px; color: #94a3b8;">
+            Chicago's premier residential & commercial heating, cooling, and heat pump installation specialists.
+          </p>
+          <p style="color: var(--color-salmon); font-weight: 800;">📞 24/7 Hotline: (312) 555-0199</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">🏡 Home Overview</a></li>
+            <li><a href="services.html">🛠️ HVAC Services</a></li>
+            <li><a href="products.html">📦 Products & Equipment</a></li>
+            <li><a href="about.html">👥 About Our Team</a></li>
+            <li><a href="contact.html">📅 Schedule Online</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">🔥 24/7 Furnace Repair</a></li>
+            <li><a href="services.html">❄️ High-SEER AC Install</a></li>
+            <li><a href="services.html">⚡ Cold-Climate Heat Pumps</a></li>
+            <li><a href="services.html">💨 Air Duct Sanitization</a></li>
+            <li><a href="services.html">🛠️ $89 Safety Tune-Ups</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chicago Headquarters</h4>
+          <p style="font-size: 0.92rem; margin-bottom: 10px;">📍 450 N Michigan Ave, Chicago, IL 60611</p>
+          <p style="font-size: 0.92rem; margin-bottom: 10px;">✉️ support@bestcomforthvac.com</p>
+          <p style="font-size: 0.92rem; color: var(--color-cyan);">⏰ 24 Hours / 7 Days A Week</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 BestComfort HVAC. All Rights Reserved. 100% Pure Handcrafted HTML5/CSS3/Vanilla JS.</p>
+        <p>Electric Salmon • Rich Midnight Blue • Hot Pink • Electric Cyan Theme</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
