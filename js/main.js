@@ -1,5 +1,6 @@
 /**
- * Best Comfort HVAC Joliet Office - Interactive Vanilla JS
+ * Trey Durden - Thermal Applications Engineer & HVAC Specialist
+ * Interactive Vanilla JS
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
       coolModeBtn.classList.remove('active', 'cool');
       
       if (heroDynamicTitle) {
-        heroDynamicTitle.innerHTML = 'Best Comfort HVAC <span class="text-gradient">Heating &amp; Cooling Experts</span>';
+        heroDynamicTitle.innerHTML = 'Trey Durden <span class="text-gradient">Thermal Engineering &amp; HVAC</span>';
       }
       if (heroDynamicDesc) {
-        heroDynamicDesc.textContent = 'Professional HVAC services for residential and commercial customers in the Chicago & Joliet area. 24/7 emergency service available with same-day appointments.';
+        heroDynamicDesc.textContent = 'High-performance thermodynamic analysis, residential system design, and commercial HVAC engineering with field-tested precision.';
       }
       if (heroTempGauge) {
         heroTempGauge.textContent = '24/7';
@@ -56,10 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
       heatModeBtn.classList.remove('active', 'heat');
 
       if (heroDynamicTitle) {
-        heroDynamicTitle.innerHTML = 'Summer High-Efficiency <span class="text-gradient-cyan">Cooling &amp; AC Defense</span>';
+        heroDynamicTitle.innerHTML = 'Precision Load Balancing <span class="text-gradient-cyan">&amp; Cooling Architectures</span>';
       }
       if (heroDynamicDesc) {
-        heroDynamicDesc.textContent = 'Keep your home ice-cold during 95°F Midwest heat waves with high-SEER2 central AC and multi-zone ductless systems.';
+        heroDynamicDesc.textContent = 'Keep facilities and residential estates optimized during extreme temperature peaks with high-SEER2 multi-zone and geothermal systems.';
       }
       if (heroTempGauge) {
         heroTempGauge.textContent = '68°F';
@@ -173,9 +174,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroQuoteForm) {
     heroQuoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('quoteName') ? document.getElementById('quoteName').value : 'Valued Customer';
-      const service = document.getElementById('quoteService') ? document.getElementById('quoteService').value : 'HVAC Service';
-      alert(`🎉 Thank you, ${name}! Your Joliet request for "${service}" has been received. Our dispatch team will call you within 15 minutes at 815-556-0660!`);
+      const name = document.getElementById('quoteName') ? document.getElementById('quoteName').value : 'Client';
+      const service = document.getElementById('quoteService') ? document.getElementById('quoteService').value : 'Engineering Consultation';
+      alert(`🎉 Thank you, ${name}! Your consultation request for "${service}" has been received. Trey Durden will review your thermal specs and follow up within 24 hours.`);
       heroQuoteForm.reset();
     });
   }
@@ -184,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('✅ Appointment scheduled successfully! Best Comfort HVAC Joliet Office will contact you shortly to confirm your service slot.');
+      alert('✅ Consultation scheduled successfully! Trey Durden will review your engineering brief and contact you shortly to confirm.');
       bookingForm.reset();
     });
   }
