@@ -1252,24 +1252,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .coupon-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: var(--color-bg-card, #ffffff);
   border: 1.5px dashed var(--color-salmon);
   border-radius: var(--radius-md, 12px);
   padding: 24px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
 .coupon-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(255, 77, 48, 0.2);
+  box-shadow: var(--shadow-md);
   border-style: solid;
+  border-color: var(--color-salmon);
 }
 
 .coupon-discount {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 900;
   color: var(--color-salmon);
   line-height: 1.1;
@@ -1279,19 +1281,19 @@ h1, h2, h3, h4, h5, h6 {
 .coupon-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text-main, #2d2a24);
   margin-bottom: 14px;
 }
 
 .coupon-code-pill {
   display: inline-block;
-  background: rgba(255, 77, 48, 0.15);
+  background: rgba(177, 138, 87, 0.12);
   border: 1px solid var(--color-salmon);
   color: var(--color-salmon);
-  padding: 4px 14px;
+  padding: 5px 14px;
   border-radius: var(--radius-pill, 9999px);
   font-weight: 800;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
 }
 
