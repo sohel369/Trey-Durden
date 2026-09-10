@@ -219,12 +219,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const bookingForm = document.getElementById('bookingForm');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('✅ Consultation scheduled successfully! Trey Durden will review your engineering brief and contact you shortly to confirm.');
-      bookingForm.reset();
+  // 8. Interactive Hardware Studio Stage (4 Thumbnails Switcher)
+  const thumbnailItems = document.querySelectorAll('.thumbnail-bento-item');
+  const primaryProductImg = document.getElementById('primaryProductImg');
+  const stageBadge = document.getElementById('stageBadge');
+
+  if (thumbnailItems.length > 0 && primaryProductImg) {
+    thumbnailItems.forEach(item => {
+      item.addEventListener('click', () => {
+        thumbnailItems.forEach(t => t.classList.remove('active'));
+        item.classList.add('active');
+
+        const newImg = item.getAttribute('data-img');
+        const newTitle = item.getAttribute('data-title');
+
+        if (newImg) {
+          primaryProductImg.style.opacity = '0.2';
+          primaryProductImg.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            primaryProductImg.src = newImg;
+            primaryProductImg.style.opacity = '1';
+            primaryProductImg.style.transform = 'scale(1)';
+          }, 150);
+        }
+
+        if (stageBadge && newTitle) {
+          stageBadge.textContent = newTitle;
+        }
+      });
     });
   }
 });
