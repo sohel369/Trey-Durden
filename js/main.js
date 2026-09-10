@@ -15,6 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileNavToggle.setAttribute('aria-expanded', isExpanded);
       mobileNavToggle.textContent = isExpanded ? '✕' : '☰';
     });
+
+    // Auto-close mobile nav when a link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navMenu.classList.remove('show');
+          mobileNavToggle.setAttribute('aria-expanded', 'false');
+          mobileNavToggle.textContent = '☰';
+        }
+      });
+    });
   }
 
   // 2. Interactive Heat Mode 🔥 vs Cool Mode ❄️ Climate Switcher (Hero Section)
