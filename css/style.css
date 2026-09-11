@@ -1,9 +1,6 @@
-/* ==========================================================================
-   BESTCOMFORT HVAC - BENTO GRID & CLIMATE STUDIO DESIGN SYSTEM
-   Palette: Electric Salmon (#FF4D30 / #FF6548), Rich Midnight Blue (#040D1A / #071933 / #0E2A54),
-            Vibrant Hot Pink (#FF1A75 / #FF3E94), Electric Ice Cyan (#00E5FF)
-   100% Pure Handcrafted CSS3 (Zero External Libraries, Zero Bloat)
-   ========================================================================== */
+/* TREY DURDEN - THERMAL APPLICATIONS ENGINEERING & HVAC SPECIALIST
+   Modern Editorial Bento System & Interactive Climate Architecture
+   Clean Vanilla CSS3 (Modular Tokens, Custom Properties & Responsive System) */
 
 :root {
   /* Rich Midnight Blues */
@@ -59,9 +56,7 @@
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   Base & Reset
-   ========================================================================== */
+/* Base & Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -103,9 +98,7 @@ img, svg {
   margin: 0 auto;
 }
 
-/* ==========================================================================
-   Typography & Creative Headings
-   ========================================================================== */
+/* Typography & Creative Headings */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-blue-deep);
   font-weight: 850;
@@ -130,9 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 .text-cyan { color: var(--color-cyan); }
 .text-white { color: #ffffff !important; }
 
-/* ==========================================================================
-   Badges & Interactive Tags
-   ========================================================================== */
+/* Badges & Interactive Tags */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -198,9 +189,7 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 229, 255, 0); }
 }
 
-/* ==========================================================================
-   Buttons with High-Impact Polish
-   ========================================================================== */
+/* Buttons with High-Impact Polish */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -267,9 +256,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-3px);
 }
 
-/* ==========================================================================
-   Header & Top Announcement Bar
-   ========================================================================== */
+/* Header & Top Announcement Bar */
 .top-announcement {
   background: var(--bg-darkest);
   color: #fff;
@@ -527,9 +514,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* ==========================================================================
-   INNOVATIVE CLIMATE SWITCHER & HERO BENTO STAGE
-   ========================================================================== */
+/* INNOVATIVE CLIMATE SWITCHER & HERO BENTO STAGE */
 .hero-bento-section {
   background: linear-gradient(180deg, rgba(4, 13, 26, 0.82) 0%, rgba(4, 13, 26, 0.93) 100%), url('../images/hvac-hero.jpg') center center / cover no-repeat;
   padding: 60px 0 85px;
@@ -719,9 +704,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   Section Headers & Standard Cards
-   ========================================================================== */
+/* Section Headers & Standard Cards */
 .section {
   padding: 85px 0;
 }
@@ -822,9 +805,7 @@ h1, h2, h3, h4, h5, h6 {
 .bullet-emoji.pink { background: rgba(255, 26, 117, 0.15); }
 .bullet-emoji.blue { background: rgba(15, 54, 109, 0.15); }
 
-/* ==========================================================================
-   PRODUCTS PAGE: High-Tech Blueprint & Interactive Studio Stage
-   ========================================================================== */
+/* PRODUCTS PAGE: High-Tech Blueprint & Interactive Studio Stage */
 .product-studio-stage {
   background: #ffffff;
   border: 1px solid var(--color-border);
@@ -1006,9 +987,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 5px;
 }
 
-/* ==========================================================================
-   ACCORDION MATRIX (Client Core Requirement)
-   ========================================================================== */
+/* ACCORDION MATRIX (Client Core Requirement) */
 .accordion-wrapper {
   display: flex;
   flex-direction: column;
@@ -1115,9 +1094,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
 }
 
-/* ==========================================================================
-   Neighborhood Quick Selector Pills (Contact Page)
-   ========================================================================== */
+/* Neighborhood Quick Selector Pills (Contact Page) */
 .neighborhood-pills-row {
   display: flex;
   flex-wrap: wrap;
@@ -1144,9 +1121,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-salmon);
 }
 
-/* ==========================================================================
-   Subpage Hero Banner
-   ========================================================================== */
+/* Subpage Hero Banner */
 .subpage-hero {
   background: linear-gradient(135deg, rgba(4, 13, 26, 0.85) 0%, rgba(11, 34, 70, 0.90) 100%), url('../images/hvac-install.jpg') center center / cover no-repeat;
   color: #ffffff;
@@ -1180,9 +1155,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* Footer */
 .site-footer {
   background: var(--bg-darkest);
   color: #cbd5e1;
@@ -1243,9 +1216,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #64748b;
 }
 
-/* ==========================================================================
-   Special Offers / Promotional Coupons
-   ========================================================================== */
+/* Special Offers / Promotional Coupons */
 .coupon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1392,9 +1363,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
+/* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .bento-grid,
   .studio-grid,
@@ -1462,9 +1431,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ===========================================================================
-   MODERN LUXURY OVERLAY — tailored editorial treatment for the bento system
-   =========================================================================== */
+/* MODERN LUXURY OVERLAY — tailored editorial treatment for the bento system */
 
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=MonteCarlo&display=swap');
 
@@ -1732,9 +1699,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-bottom { color: #777166; }
 ::selection { background: #caa974; color: #18150f; }
 
-/* ==========================================================================
-   COMPREHENSIVE RESPONSIVE OPTIMIZATIONS ACROSS ALL DEVICES
-   ========================================================================== */
+/* COMPREHENSIVE RESPONSIVE OPTIMIZATIONS ACROSS ALL DEVICES */
 
 @media (max-width: 1024px) {
   .container {
