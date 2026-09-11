@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dfc082"/>
+      <stop offset="50%" stop-color="#b9955f"/>
+      <stop offset="100%" stop-color="#89663d"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1914"/>
+      <stop offset="100%" stop-color="#0a0907"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Badge Background -->
+  <circle cx="32" cy="32" r="30" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="2,2" opacity="0.6"/>
+  
+  <!-- Monogram T Letter -->
+  <text x="32" y="41" font-family="'Times New Roman', 'Baskerville', serif" font-size="28" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="0">T</text>
+  
+  <!-- Dual Thermal Accents (Flame & Ice dots) -->
+  <circle cx="21" cy="46" r="2" fill="#ff6b4a"/>
+  <circle cx="43" cy="46" r="2" fill="#38bdf8"/>
+</svg>
