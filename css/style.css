@@ -1433,7 +1433,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* MODERN LUXURY OVERLAY — tailored editorial treatment for the bento system */
 
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Great+Vibes&family=Mr+Dafoe&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Sacramento&display=swap');
 
 :root {
   --bg-darkest: #0d0d0b;
@@ -1475,7 +1475,7 @@ h1, h2, h3, h4, h5, h6 {
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: 'Playfair Display', 'Cormorant Garamond', 'Iowan Old Style', Baskerville, Georgia, serif;
   --font-display-hero: 'Playfair Display', 'Cormorant Garamond', 'Cinzel', serif;
-  --font-signature-bold: 'Mr Dafoe', 'Satisfy', 'Alex Brush', cursive;
+  --font-signature-handwritten: 'Great Vibes', 'Allura', 'Alex Brush', 'Dancing Script', cursive;
   --transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1493,16 +1493,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .trey-hero-brand {
-  font-family: var(--font-signature-bold) !important;
-  font-size: 1.25em !important;
+  font-family: var(--font-signature-handwritten) !important;
+  font-size: 1.42em !important;
   font-weight: 400 !important;
   color: #dfc082 !important;
-  letter-spacing: 0.02em !important;
+  background: linear-gradient(135deg, #fff4d6 0%, #e0be7d 45%, #b68b4c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.03em !important;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   display: inline-block;
-  margin-right: 12px;
-  line-height: 1.1;
+  margin-right: 14px;
+  padding-right: 6px;
+  line-height: 1.15;
   text-transform: none !important;
+  transform: rotate(-1.8deg);
+  transform-origin: left bottom;
 }
 
 .trey-display-title {
