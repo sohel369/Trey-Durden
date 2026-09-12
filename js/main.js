@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       coolModeBtn.classList.remove('active', 'cool');
       
       if (heroDynamicTitle) {
-        heroDynamicTitle.innerHTML = '<span class="trey-signature">Trey Durden</span> <span class="text-gradient">Thermal Engineering &amp; HVAC</span>';
+        heroDynamicTitle.innerHTML = '<span class="trey-hero-brand">Trey Durden</span> <span class="text-gradient">Thermal Engineering &amp; HVAC</span>';
       }
       if (heroDynamicDesc) {
         heroDynamicDesc.textContent = 'High-performance thermodynamic analysis, residential system design, and commercial HVAC engineering with field-tested precision.';
